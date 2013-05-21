@@ -1,6 +1,6 @@
 {
-  "name": "mikestaceykc",
-  "version": "0.0.1-4",
+  "name": "mikestaceykc.com",
+  "version": "0.0.1-1",
   "private": true,
   "scripts": {
     "start": "node app.js"
@@ -10,6 +10,10 @@
     "jade": "*"
   },
   "subdomain": "mikestaceykc",
+  "domains": [
+    "mikestaceykc.com",
+    "www.mikestaceykc.com"
+  ],
   "engines": {
     "node": "0.8.x"
   }
