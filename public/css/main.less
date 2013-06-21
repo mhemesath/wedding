@@ -1,0 +1,472 @@
+@import 'normalize';
+@import 'base';
+
+@textColor: #666;
+@gray: #808080;
+@grayLight: #999;
+@primaryColor: #E6D5CD;
+@primaryColorDark: #C27B54;
+@secondaryColor: #4A2635;
+@secondaryColorDark: "";
+
+@gridWidth: 40px;
+@gridGutterWidth: 20px;
+
+.columns(@columns, @offset: 0) {
+  width: (@columns * @gridWidth) + ((@columns - 1) * @gridGutterWidth) + @offset;
+}
+
+.clearfix {
+  &:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+@phone: ~"screen and (max-width: 767px)";
+@tablet: ~"screen and (min-width: 768px) and (max-width: 959px)";
+@desktop: ~"screen and (min-width: 960px)";
+
+@desktopWidth: 960px;
+@tabletWidth: 768px;
+
+.container {
+  .clearfix;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  display: block;
+  
+  @media @desktop {
+    width: @desktopWidth;
+  }
+  
+
+  @media @phone  {
+    width: auto;
+  }
+}
+
+section {
+  display: block;
+  padding: 20px 0;
+}
+
+/* HEADER */
+header {
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: @primaryColor;
+  height: 70px;
+  border: 1px solid #FFF;
+  border-width: 1px 0;
+  box-shadow: 0px 1px 5px rgba(0,0,0,.4);
+
+  li, ul {
+    float: left;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+   li {
+    margin-right: 35px;
+  }
+  
+   a {
+    display: block;
+    height: 70px;
+    line-height: 70px;
+    color: @primaryColorDark;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #FFF;
+  }
+}
+
+/*****************************************
+* Brid and Groom
+******************************************/
+
+.bride-groom  {
+  
+
+  img {
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+    height: 350px;
+    width: 350px;
+    border: 15px solid #FFF;
+    box-shadow: 1px 1px 8px rgba(0,0,0,.6);
+    
+    display: block;
+    margin: 0 auto 50px;
+    
+    @media @desktop {
+      position: absolute;
+      left: 40px;
+      top: 20px;
+    }
+    
+    @media @tablet {
+      position: absolute;
+      left: 40px;
+      top: 40px;
+      height: 200px;
+      width: 200px;
+    }
+    
+  }
+  
+  h1 {
+    margin: 0;
+    position: relative;
+    margin-bottom: 40px;
+    height: 300px;
+    font-size: 160px;
+    
+    @media @desktop {
+      margin-left: 430px;
+    }
+    
+    @media @tablet {
+      margin-left: 220px;
+      -webkit-transform: scale(.8);
+      -moz-transform:    scale(.8);
+      -ms-transform:     scale(.8);
+      -o-transform:      scale(.8);
+      transform:         scale(.8);
+    }
+  }
+  
+  .bride,
+  .groom,
+  .ampersand {
+    position: relative;
+    font-weight: normal;
+    position: absolute;
+  }
+  
+  
+  .ampersand {
+    color: #FFF;
+    background-color: @primaryColorDark;
+    height: 85px;
+    width: 85px;
+    border-radius: 85px;
+    display: block;
+    text-align: center;
+    font-size: 85px;
+    font-family: 'Alex Brush', cursive;
+    line-height: 100px;
+    top: 130px;
+    left: 50px;
+  }
+  
+  .first-name {
+    position: absolute;
+    font-family: 'Alex Brush', cursive;
+    font-size: 160px;
+    color: @secondaryColor;
+    line-height: 160px;
+    text-shadow: 0 3px 0 #FFF;
+  }
+  
+  .last-name {
+    position: absolute;
+    font-family: 'Raleway', sans-serif;
+    font-size: 34px;
+    color: @gray;
+    text-transform: uppercase;
+  }
+  
+  .bride {
+    top: 150px;
+    left: 100px;
+  }
+  
+  .bride .last-name{
+    top: 110px;
+    left: 230px;
+  }
+  
+  .groom .last-name{
+    top: 110px;
+    left: 250px;
+  }
+  
+  
+  p {
+    @media @desktop {
+      margin-left: 430px;
+      width: 50%;
+    }
+
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    color: @gray;
+  }
+  
+  time {
+    font-size: 38px;
+    border-top: 1px dashed @grayLight;
+    padding-top: 20px;
+  }
+  
+  .location {
+    display: block;
+    font-size: 26px;
+  }
+}
+
+/*****************************************
+* Our Story
+******************************************/
+.our-story {
+  background-color: #FFF;
+  padding-bottom: 60px;
+}
+
+/*****************************************
+* Schedule & Location
+******************************************/
+.location-schedule {
+  background: #f4f4f4 url(/img/unity-bg.jpg) no-repeat center;
+  color: #000;
+  text-shadow: 0 1px 0 #FFF;
+
+  ul {
+    padding: 0;
+    list-style-position: inside;
+    line-height: 2.5em;
+  }
+  
+  .snapshots {
+    float: right;
+    width: 60%;
+    text-align: left;
+    margin-bottom: 100px;
+    
+    @media @phone {
+      display: none;
+    }
+  }
+  
+  .frame {
+    display: inline;
+    max-height: 230px;
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    &:first-child {
+      right: -50px;
+      top: 50px;
+      position: relative;
+    }
+    & + .frame {
+      -webkit-transform: rotate(5deg);
+      -moz-transform: rotate(5deg);
+      -ms-transform: rotate(5deg);
+      -o-transform: rotate(5deg);
+    }
+    
+    @media @tablet {
+      max-width: 200px;
+      max-height: 200px;
+    }
+    
+  }
+  
+  .agenda {
+    width: 35%;
+    margin-bottom: 30px;
+    float: left;
+    white-space: nowrap;
+    
+    @media @phone {
+      width: auto;
+      float: none;
+    }
+  }
+  
+  .agenda ul {
+    list-style: none;
+    margin: 0;
+  }
+  
+  &:after {
+    display: table;
+    content: "";
+    height: 0;
+    clear: both;
+  }
+  
+  .travel,
+  .shuttle {
+    float: left;
+    width: 47.5%;
+    margin-left: 5%;
+    
+    @media @phone {
+      width: auto;
+      float: none;
+      margin: 0 0 20px;
+    }
+  }
+  
+  .travel {
+    margin-left: 0;
+    clear: both;
+  }
+}
+
+.maps {
+  
+  h4 {
+    border-bottom: none;
+  }
+  
+  iframe {
+    border: 1px solid @gray;
+  }
+  
+  .map {
+    background-color: #FFF;
+    padding: 20px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+    width: 425px;
+    
+    @media @tablet {
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+    
+    @media @desktop {
+      float: left;
+      
+      & + .map {
+        float: right;
+      }
+    }
+    
+    @media @phone {
+      float: none !important;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  
+}
+
+
+/*****************************************
+* Gifts
+******************************************/
+.gifts {
+  background-color: #FFF;
+  padding-bottom: 60px;
+
+  p + h3 {
+    margin-top: 30px;
+  }
+  
+  .registries img {
+    display: inline;
+    height: 50px;
+    margin-right: 30px;
+    margin-top: 15px;
+  }
+  
+  &:after {
+    content: "";
+    display: table;
+    height: 0;
+    clear: both;
+  }
+  
+  .registries {
+    width: 50%;
+    float: left;
+  }
+  
+  .charity {
+    float: right;
+    width: 40%;
+  }
+  
+  @media @phone {
+    .charity, .registries {
+      float: none;
+      width: auto;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+/*****************************************
+* Kansas City
+******************************************/
+.kansas-city {
+  background: #f4f4f4 url(/img/kc.jpg) no-repeat center;
+  color: #000;
+  text-shadow: 0 1px 0 #FFF;
+  padding-bottom: 30px;
+  
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+    height: 0;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+  }
+  
+  p {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .category {
+    float: left; 
+    width: 33%;
+    
+    @media @phone {
+      width: auto;
+      float: none;
+    }
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  a {
+    background-color: rgba(255,255,255,.7);
+    color: @secondaryColor;
+    padding: 10px;
+    margin: 2px;
+    text-decoration: none;
+    display: block;
+    
+    &:hover {
+      background-color: #FFF;
+      text-decoration: underline;
+    }
+  }
+  
+  .break {
+    clear: left;
+  }
+}
