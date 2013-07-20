@@ -1,0 +1,34 @@
+extends ../layout
+
+block content
+  section.rsvp-form
+    div.container
+      h2 RSVP
+      if error
+        p.error= error
+      form(method="post", action="/rsvp")
+        input(type='hidden', name='rsvp[attending]', value='#{rsvp.attending}')
+        if rsvp.attending
+          p We're extremely grateful that you have decided to be a part of our special day.
+          .control.email
+            label Email
+            input(name='rsvp[email]', value='#{rsvp.email}', type='email')
+          .control.first-name
+            label First Name
+            input(name='guest[first_name]', value='#{guest.first_name}', type='text')
+          .control.last-name
+            label Last Name
+            input(name='guest[last_name]', value='#{guest.last_name}', type='text')
+          
+          .form-actions
+            button.btn.btn-accept(type='submit', name='save', value='save') Next
+            a(href='/') Cancel
+                
+            
+        else 
+          p  We're sorry you're unable to join us. Please provide your email address, and name so we can record your response.
+  script
+    $(document.body).on('change', '#guest_count', function() {
+      $(this).closest('form').submit();
+    });
+        

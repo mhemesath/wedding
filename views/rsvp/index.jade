@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+  section.rsvp-search
+    div.container
+      h2 Search for your RSVP
+      if query
+        p.error No RSVPs were found for that email address.
+      form(method="get", action="/rsvp")
+        div
+          input(type='email', name='query', value='#{query}', id="query", placeholder="enter you email address")  
+          button.btn(type='submit') Search
+          label(for="query") Enter the email address you used when making the RSVP

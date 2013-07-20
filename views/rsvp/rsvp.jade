@@ -1,0 +1,60 @@
+extends layout
+
+block content
+  section.rsvp
+    div.container
+      h2 RSVP
+      form(method="post", action="/rsvp")
+        input(type='hidden', name='rsvp[attending]', value='#{rsvp.attending}')
+        if rsvp.attending
+          p We're extremely grateful that you have decided to be a part of our special day.
+          div
+            label Email
+            input(name='rsvp[email]', value='#{rsvp.email}', type='email')
+          div
+            label First Name
+            input(name='guest[first_name]', value='#{guest.first_name}', type='text')
+          div
+            label Last Name
+            input(name='guest[last_name]', value='#{guest.last_name}', type='text')
+          div 
+            label Attending
+            select(name='guest_count', id="guest_count")
+              each i in [1,2,3,4,5,6,7,8,9,10]
+                - var select = i === rsvp.guests.length ? 'selected': null;
+                option(selected=select)= i
+            span Guests
+          if rsvp.guests.length > 0
+            fieldset.guest-list
+              legend Guest List
+              ul
+                each guest, i in rsvp.guests
+                  li
+                    div
+                      label First Name
+                      input(name='guests[#{i}][first_name]', value='#{guest.first_name}')
+                    div
+                      label Last Name
+                      input(name='guests[#{i}][last_name]', value='#{guest.last_name}')
+                    div
+                      select(name='guests[#{i}][adult]', value='#{guest.adult}')
+                        option(value="true") Adult
+                        option(value="false") Child
+                    div
+                      label Dinner
+                        select(name='guests[#{i}][dinner]', value='#{guest.dinner}')
+                          option Beef Brisket
+                          option Chicken
+                          option Vegitarian
+                          option Chicken Strips (kids 2-12)
+          button.btn.btn-accept(type='submit', name='save', value='save') RSVP
+          a(href='/') Cancel
+                
+            
+        else 
+          p  We're sorry you're unable to join us. Please provide your email address, and name so we can record your response.
+  script
+    $(document.body).on('change', '#guest_count', function() {
+      $(this).closest('form').submit();
+    });
+        

@@ -1,0 +1,110 @@
+.control {
+  margin-bottom: @gridGutterWidth;
+  input {
+    font-size: 16px;
+    border: 1px solid @grayLighter;
+    padding: 11px 5px;
+    display: inline-block;
+  }
+  
+  select {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  label {
+    display: block;
+    span {
+      display: block;
+      margin-bottom: 10px;
+    }
+  } 
+}
+
+.rsvp-search {
+  text-align: center;
+  
+  label {
+    display: block;
+    color: @grayLight;
+    margin-top: 10px;
+  }
+  
+  .btn {
+    background-color: #4A2635;
+  }
+  
+  input[type=email] {
+    font-size: 16px;
+    border: 1px solid @grayLighter;
+    padding: 11px 5px;
+    display: inline-block;
+    
+    @media @desktop {
+      width: 400px;
+    }
+  }
+}
+
+
+.rsvp-form {   
+   .email input {
+     width: 600px + @gridGutterWidth;
+   }
+   
+   .control input {
+      width: 300px;
+   }
+   
+   .first-name {
+     margin-right: 10px;
+   }
+   
+   .first-name, .last-name {
+     float: left;
+   }
+   
+   .form-actions {
+     clear: both;
+   }
+}
+
+
+.guest-list {
+  background-color: #FFF;
+  border: 1px solid @grayLighter;
+  padding: 0 @gridGutterWidth @gridGutterWidth;
+  margin-bottom: @gridGutterWidth;
+  
+  legend {
+    font-size: 16px;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: @gridGutterWidth;
+  }
+  
+  li {
+    border-top: 1px dashed @grayLighter;
+    padding: @gridGutterWidth/2 0;
+    .clearfix();
+    
+    .btn {
+      float: right;
+      margin-top: 1.5em;
+    }
+  }
+  
+  .control {
+    float: left;
+    display: block;
+    margin-right: 10px;
+    label {
+      display: block;
+    }
+  }
+  
+}
