@@ -1,9 +1,12 @@
 @import 'normalize';
 @import 'base';
+@import 'iconic_stroke.css';
+@import 'rsvp';
 
 @textColor: #666;
 @gray: #808080;
 @grayLight: #999;
+@grayLighter: #CCC;
 @primaryColor: #E6D5CD;
 @primaryColorDark: #C27B54;
 @secondaryColor: #4A2635;
@@ -11,6 +14,10 @@
 
 @gridWidth: 40px;
 @gridGutterWidth: 20px;
+
+.iconic {
+  font-style: normal;
+}
 
 .columns(@columns, @offset: 0) {
   width: (@columns * @gridWidth) + ((@columns - 1) * @gridGutterWidth) + @offset;
@@ -31,6 +38,45 @@
 @desktopWidth: 960px;
 @tabletWidth: 768px;
 
+.btn {
+  background-color: @gray;
+  color: #FFF;
+  font-family: 'Raleway',sans-serif;
+  font-size: 14px;
+  padding: 7px 20px;
+  text-decoration: none;
+  font-weight: 200;
+  text-shadow: 0 1px 0 hsla(0, 0%, 0%, 0.2);
+  border: 5px solid hsl(0, 100%, 100%);
+  box-shadow: 0 0 1px hsla(0, 0%, 0%, 0.5);
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.btn-large {
+  font-size: 22px;
+}
+
+.btn-accept {
+  background-color: #56893D;
+}
+
+.btn-danger {
+  background-color: #8B0600;
+}
+
+.pull-right {
+  float: right;
+}
+
+.error {
+  border: 1px solid #DD676C;
+  color: #DD676C;
+  font-size: 14px;
+  padding: 10px;
+  background-color: #FFF;
+}
+
 .container {
   .clearfix;
   margin: 0 auto;
@@ -39,7 +85,7 @@
   display: block;
   
   @media @desktop {
-    width: @desktopWidth;
+    max-width: @desktopWidth;
   }
   
 
@@ -51,6 +97,10 @@
 section {
   display: block;
   padding: 20px 0;
+  
+  @media @phone {
+    background-image: none !important;
+  }
 }
 
 /* HEADER */
@@ -65,6 +115,10 @@ header {
   border: 1px solid #FFF;
   border-width: 1px 0;
   box-shadow: 0px 1px 5px rgba(0,0,0,.4);
+  
+  @media @phone {
+    height: 50px;
+  }
 
   li, ul {
     float: left;
@@ -74,7 +128,31 @@ header {
   }
   
    li {
-    margin-right: 35px;
+    margin-right: 30px;
+    
+    @media @tablet {
+      margin-right: 20px;
+    }
+    
+    @media @phone {
+      margin-right: 20px;
+    }
+  }
+  
+  .iconic {
+    font-style: normal;
+    font-size: 22px;
+    font-weight: normal;
+    
+    @media @desktop {
+      float: left;
+      margin-right: 3px;
+    }
+    
+    @media @tablet {
+      float: left;
+      margin-right: 3px;
+    }
   }
   
    a {
@@ -85,6 +163,18 @@ header {
     font-weight: bold;
     text-decoration: none;
     text-shadow: 0 1px 0 #FFF;
+    
+    @media @phone {
+      height: 50px;
+      line-height: 50px;
+      span {
+        display: none;
+      }
+      
+      .iconic {
+        font-size: 22px;
+      }
+    }
   }
 }
 
@@ -94,7 +184,34 @@ header {
 
 .bride-groom  {
   
-
+  .rsvp {
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px 10px;
+    background-color: #FFF;
+    border: 1px solid #CCC;
+    width: 600px;
+  
+    .change-rsvp {
+      font-size: 12px;
+      margin: 20px 0 10px;
+      color: #AAA;
+      a {
+        color: @secondaryColor;
+      }
+    }
+    
+    h2 {
+      color: @gray;
+      margin: 0 0 20px;
+      text-align: center;
+      font-family: 'Raleway',sans-serif;
+      text-transform: none;
+      font-size: 16px;
+      font-weight: 200;
+    }
+  }
+  
   img {
     -webkit-transform: rotate(-2deg);
     -moz-transform: rotate(-2deg);
@@ -122,7 +239,15 @@ header {
       width: 200px;
     }
     
+    @media @phone {
+      position: static;
+      height: auto;
+      width: 85%;
+      display: block;
+      margin: 0 auto 60px;
+    }
   }
+
   
   h1 {
     margin: 0;
@@ -142,6 +267,17 @@ header {
       -ms-transform:     scale(.8);
       -o-transform:      scale(.8);
       transform:         scale(.8);
+    }
+    
+    @media @phone {
+      margin-left: -80px;
+      margin-top: -40px;
+      margin-bottom: -20px;
+      -webkit-transform: scale(.6);
+      -moz-transform:    scale(.6);
+      -ms-transform:     scale(.6);
+      -o-transform:      scale(.6);
+      transform:         scale(.6);
     }
   }
   
@@ -218,11 +354,19 @@ header {
     font-size: 38px;
     border-top: 1px dashed @grayLight;
     padding-top: 20px;
+    
+    @media @phone {
+      font-size: 28px;
+    }
   }
   
   .location {
     display: block;
     font-size: 26px;
+    
+    @media @phone {
+      font-size: 19.5px;
+    }
   }
 }
 
@@ -261,7 +405,7 @@ header {
   
   .frame {
     display: inline;
-    max-height: 230px;
+    max-height: 225px;
     -webkit-transform: rotate(-5deg);
     -moz-transform: rotate(-5deg);
     -ms-transform: rotate(-5deg);
@@ -330,37 +474,34 @@ header {
 
 .maps {
   
+  background-color: #FFF;
+  
   h4 {
     border-bottom: none;
-  }
-  
-  iframe {
-    border: 1px solid @gray;
+    margin: 0;
+    font-weight: normal;
   }
   
   .map {
     background-color: #FFF;
-    padding: 20px;
+    padding: 10px;
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
-    width: 425px;
-    
-    @media @tablet {
-      margin: 0 auto;
-      margin-bottom: 20px;
+    width: 45%;
+    float: left;
+      
+    & + .map {
+      float: right;
     }
     
-    @media @desktop {
-      float: left;
-      
-      & + .map {
-        float: right;
-      }
+    img {
+      max-width: 100%;
+      height: auto;
     }
     
     @media @phone {
       float: none !important;
-      margin: 0 auto;
-      margin-bottom: 20px;
+      margin: 0 auto 40px;
+      width: auto;
     }
   }
 
@@ -433,8 +574,7 @@ header {
   }
   
   p {
-    text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
   
   .category {
@@ -453,7 +593,7 @@ header {
   }
   
   a {
-    background-color: rgba(255,255,255,.7);
+    background-color: #FFF;
     color: @secondaryColor;
     padding: 10px;
     margin: 2px;

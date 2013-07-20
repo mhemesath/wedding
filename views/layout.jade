@@ -1,7 +1,53 @@
 doctype 5
 html
   head
+    meta(charset='utf-8')
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='description', content='')
+    meta(name='HandheldFriendly', content='True')
+    meta(name='MobileOptimized', content='320')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(http-equiv='cleartype', content='on')
+    link(rel='apple-touch-icon-precomposed', sizes='144x144', href='img/touch/apple-touch-icon-144x144-precomposed.png')
+    link(rel='apple-touch-icon-precomposed', sizes='114x114', href='img/touch/apple-touch-icon-114x114-precomposed.png')
+    link(rel='apple-touch-icon-precomposed', sizes='72x72', href='img/touch/apple-touch-icon-72x72-precomposed.png')
+    link(rel='apple-touch-icon-precomposed', href='img/touch/apple-touch-icon-57x57-precomposed.png')
+    link(rel='shortcut icon', href='img/touch/apple-touch-icon.png')
+    
+    meta(name='apple-mobile-web-app-capable" content="yes')
+    meta(name='apple-mobile-web-app-status-bar-style', content='black')
+    meta(name='apple-mobile-web-app-title', content='')
+
+    link(href='http://fonts.googleapis.com/css?family=Alex+Brush|Raleway', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', href='/css/main.css')
+    script(src='http://code.jquery.com/jquery-1.10.1.min.js')
+    
+    
+  body    
+    // if lt IE 8
+      p.chromeframe You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.
+    
+    header
+      nav.container
+        ul
+          li
+            a(href='/') Mike &amp; Stacey
+          li
+            a(href='#locationSchedule') <i class="iconic calendar_alt_stroke"></i> <span>Schedule</span>
+          li
+            a(href='#maps') <i class="iconic compass"></i> <span>Directions</span>
+          li
+            a(href='#gifts') <i class="iconic tag_stroke"></i> <span>Gifts</span>
+          li
+            a(href='#kansasCity') <i class="iconic star"></i> <span>Kansas City</span>
+            
     block content
+    script
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-40741204-1', 'mikestaceykc.com');
+      ga('send', 'pageview');

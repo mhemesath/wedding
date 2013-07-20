@@ -99,6 +99,10 @@ html {
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
     text-shadow: 0 1px 0 #FFF;
+    
+    @media @phone {
+      padding-top: 50px;
+    }
 }
 
 img.frame {
@@ -121,11 +125,15 @@ hr.solid-reverse {
 
 h2 {
   color: #4A2635;
-  text-align: center;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 34px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  
+  @media @phone {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
 }
 
 h3 {
