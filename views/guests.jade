@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  div.container
+    h2 Guests
+    ol.confirmed-guests
+      each rsvp, i in rsvps
+        li
+          table
+            tbody
+              each guest, j in rsvp.guests
+                if rsvp.attending
+                  tr
+                    td #{guest.first_name} #{guest.last_name}
+                    td #{guest.adult ? 'Adult' : 'Child'}
+                    td #{guest.dinner}
+                    td #{new Date(rsvp.date)}
+                    td
+                      a(href='/rsvp/' + rsvp.id ) #{rsvp.email}
+          

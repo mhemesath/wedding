@@ -1,0 +1,42 @@
+doctype html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+html
+head
+  meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  title Mike & Stacey's Wedding - RSVP Confirmation
+
+body(style="background-color: #F2F2F2; color: #666; font-family:  Raleway, sans-serif; font-size: 13px; padding-top: 20px; line-height: 1.5em;")
+  table(cellpadding="0", cellspacing="0", border="0", width="100%")
+    tr
+      td(valign="top", align="center")
+        table(cellpadding="0", width="500px", cellspacing="0", border="0", align="center", style="background-color: #FFF; border: 1px solid #CCC;")
+          tr
+            td(valign="top")
+              div(style="border-bottom: 10px solid #4A2635;")
+                img(width="500", height="222", src="#{siteURL}/img/tree.jpg", style="display: block; margin: 0;", alt="Michael &amp; Stacey - October 5th, 2013")
+              if !rsvp.attending
+                div(style="padding: 20px; margin: 0; font-weight: 200;")
+                  p(style="margin: 0 0 10px; padding: 0;") #{firstName}, <br/><br/>This is a confirmation you will not be attending our wedding. We are sorry to hear that you will not be present to share our special day with us, but we thank your for being such an important part of our lives.
+                div(style="font-size: 11px; padding: 20px; text-align: center; border-top: 1px dotted #CCC;padding-top: 20px;")
+                  p(style="margin: 0;padding: 0;") Changes may be made to your reservation before September 13th. <br/><a href="http://www.mikestaceykc.com/rsvp/#{rsvp.id}" style="color: #4A2635;">Click here to make changes to your reservation.</a>
+              else
+                div(style="padding: 20px; margin: 0; font-weight: 200;")
+                  p(style="margin: 0 0 10px; padding: 0;") #{firstName}, <br/><br/>This is a confirmation you will be attending our wedding. Thank your for being such an important part of our lives and we look forward to you sharing our special day with us.
+                  p(style="margin: 0 0 20px; padding: 0;") Below are the guests that have been included in your RSVP:
+                  table(cellpadding="0", width="500px", cellspacing="0", border="0", width="100%")
+                    thead
+                      tr
+                        th(style="padding: 5px; text-align: left; border-bottom: 1px solid #FFF; background-color: #F9F9F9; font-weight: 200; font-size: 11px;") Guest
+                        th(style="padding: 5px; text-align: left; border-bottom: 1px solid #FFF; background-color: #F9F9F9; font-weight: 200; font-size: 11px;") Adult / Child
+                        th(style="padding: 5px; text-align: left; border-bottom: 1px solid #FFF; background-color: #F9F9F9; font-weight: 200; font-size: 11px;") Dinner
+                    each guest, i in rsvp.guests
+                      tbody(style="font-weight: 400;")
+                        tr 
+                          td(style="padding: 5px; border-top: 1px solid #EEE;") #{guest.first_name} #{guest.last_name}
+                          td(style="padding: 5px; border-top: 1px solid #EEE;") #{guest.adult ? "Adult" : "Child"}
+                          td(style="padding: 5px; border-top: 1px solid #EEE;") #{guest.dinner}
+              
+              div(style="font-size: 11px; padding: 20px; text-align: center; border-top: 1px dotted #CCC;padding-top: 20px;")
+                p(style="margin: 0;padding: 0;") Changes may be made to your reservation before September 13th. <br/><a href="http://www.mikestaceykc.com/rsvp/#{rsvp._id}" style="color: #4A2635;">Click here to make changes to your reservation.</a>
+        
+        div(style="margin: 10px 0;  font-size: 11px;") <a href="http://www.mikestaceykc.com" style="color: #666;">http://www.mikestaceykc.com</a>

@@ -8,25 +8,31 @@ block content
         p.error= error
       form(method="post", action="/rsvp")
         input(type='hidden', name='rsvp[attending]', value='#{rsvp.attending}')
+        
         if rsvp.attending
-          p We're extremely grateful that you have decided to be a part of our special day.
-          .control.email
-            label Email
-            input(name='rsvp[email]', value='#{rsvp.email}', type='email')
-          .control.first-name
-            label First Name
-            input(name='guest[first_name]', value='#{guest.first_name}', type='text')
-          .control.last-name
-            label Last Name
-            input(name='guest[last_name]', value='#{guest.last_name}', type='text')
-          
-          .form-actions
-            button.btn.btn-accept(type='submit', name='save', value='save') Next
-            a(href='/') Cancel
-                
-            
+          p We're extremely grateful that you have decided to be a part of our special day. 
         else 
           p  We're sorry you're unable to join us. Please provide your email address, and name so we can record your response.
+          
+        .control.email
+          label Email
+          input(name='rsvp[email]', value='#{rsvp.email}', type='email')
+          span Use this email address if you need to update your RSVP in the future.
+        .control.first-name
+          label First Name
+          input(name='guest[first_name]', value='#{guest.first_name}', type='text')
+        .control.last-name
+          label Last Name
+          input(name='guest[last_name]', value='#{guest.last_name}', type='text')
+        
+        .form-actions
+          if rsvp.attending
+            button.btn.btn-accept(type='submit', name='save', value='save') Next
+          else 
+            button.btn.btn-accept(type='submit', name='save', value='save') Save
+          
+          a(href='/') Cancel
+
   script
     $(document.body).on('change', '#guest_count', function() {
       $(this).closest('form').submit();

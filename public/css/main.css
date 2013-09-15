@@ -1,141 +1,1337 @@
 @import 'iconic_stroke.css';
-article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block;}
-audio,canvas,video{display:inline-block;*display:inline;*zoom:1;}
-audio:not([controls]){display:none;height:0;}
-[hidden]{display:none;}
-html{background:#fff;color:#000;font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
-html,button,input,select,textarea{font-family:sans-serif;}
-body{margin:0;}
-a:focus{outline:thin dotted;}
-a:active,a:hover{outline:0;}
-h1{font-size:2em;margin:0.67em 0;}
-h2{font-size:1.5em;margin:0.83em 0;}
-h3{font-size:1.17em;margin:1em 0;}
-h4{font-size:1em;margin:1.33em 0;}
-h5{font-size:0.83em;margin:1.67em 0;}
-h6{font-size:0.67em;margin:2.33em 0;}
-abbr[title]{border-bottom:1px dotted;}
-b,strong{font-weight:bold;}
-blockquote{margin:1em 40px;}
-dfn{font-style:italic;}
-hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0;}
-mark{background:#ff0;color:#000;}
-p,pre{margin:1em 0;}
-code,kbd,pre,samp{font-family:monospace, serif;_font-family:'courier new',monospace;font-size:1em;}
-pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word;}
-q{quotes:none;}
-q:before,q:after{content:'';content:none;}
-small{font-size:80%;}
-sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}
-sup{top:-0.5em;}
-sub{bottom:-0.25em;}
-dl,menu,ol,ul{margin:1em 0;}
-dd{margin:0 0 0 40px;}
-menu,ol,ul{padding:0 0 0 40px;}
-nav ul,nav ol{list-style:none;list-style-image:none;}
-img{border:0;-ms-interpolation-mode:bicubic;}
-svg:not(:root){overflow:hidden;}
-figure{margin:0;}
-form{margin:0;}
-fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em;}
-legend{border:0;padding:0;white-space:normal;*margin-left:-7px;}
-button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle;}
-button,input{line-height:normal;}
-button,select{text-transform:none;}
-button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;*overflow:visible;}
-button[disabled],html input[disabled]{cursor:default;}
-input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px;}
-input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
-input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}
-button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
-textarea{overflow:auto;vertical-align:top;}
-table{border-collapse:collapse;border-spacing:0;}
-html,button,input,select,textarea{color:#222;}
-body{font-size:1em;line-height:1.4;}
-::-moz-selection{background:#b3d4fc;text-shadow:none;}
-::selection{background:#b3d4fc;text-shadow:none;}
-hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}
-img{vertical-align:middle;}
-fieldset{border:0;margin:0;padding:0;}
-textarea{resize:vertical;}
-.chromeframe{margin:0.2em 0;background:#ccc;color:#000;padding:0.2em 0;}
-html{padding-top:70px;background:#ffffff url(/img/linen.jpg);color:#666;font-family:'Raleway',sans-serif;font-size:14px;text-shadow:0 1px 0 #FFF;}@media screen and (max-width: 767px){html{padding-top:50px;}}
-img.frame{border:10px solid #FFF;box-shadow:1px 1px 8px rgba(0, 0, 0, 0.6);}
-hr.solid{border-top:5px solid #FFF;border-bottom:5px solid #F4F4F4;margin:0;}
-hr.solid-reverse{border-bottom:5px solid #FFF;border-top:5px solid #F4F4F4;margin:0;}
-h2{color:#4A2635;text-transform:uppercase;font-weight:bold;font-size:34px;margin-bottom:20px;}@media screen and (max-width: 767px){h2{font-size:24px;margin-bottom:10px;}}
-h3{font-size:18px;color:#C27B54;margin:5px 0;}
-h4{font-size:14px;color:#4A2635;margin:5px 0;padding-bottom:10px;border-bottom:2px dotted #999;}
-.control{margin-bottom:20px;}.control input{font-size:16px;border:1px solid #cccccc;padding:11px 5px;display:inline-block;}
-.control select{font-size:16px;margin-top:10px;}
-.control label{display:block;}.control label span{display:block;margin-bottom:10px;}
-.rsvp-search{text-align:center;}.rsvp-search label{display:block;color:#999999;margin-top:10px;}
-.rsvp-search .btn{background-color:#4A2635;}
-.rsvp-search input[type=email]{font-size:16px;border:1px solid #cccccc;padding:11px 5px;display:inline-block;}@media screen and (min-width: 960px){.rsvp-search input[type=email]{width:400px;}}
-.rsvp-form .email input{width:620px;}
-.rsvp-form .control input{width:300px;}
-.rsvp-form .first-name{margin-right:10px;}
-.rsvp-form .first-name,.rsvp-form .last-name{float:left;}
-.rsvp-form .form-actions{clear:both;}
-.guest-list{background-color:#FFF;border:1px solid #cccccc;padding:0 20px 20px;margin-bottom:20px;}.guest-list legend{font-size:16px;}
-.guest-list ul{list-style:none;margin:0;padding:0;margin-top:20px;}
-.guest-list li{border-top:1px dashed #cccccc;padding:10px 0;}.guest-list li:after{display:table;clear:both;content:"";}
-.guest-list li .btn{float:right;margin-top:1.5em;}
-.guest-list .control{float:left;display:block;margin-right:10px;}.guest-list .control label{display:block;}
-.iconic{font-style:normal;}
-.clearfix:after{display:table;clear:both;content:"";}
-.btn{background-color:#808080;color:#FFF;font-family:'Raleway',sans-serif;font-size:14px;padding:7px 20px;text-decoration:none;font-weight:200;text-shadow:0 1px 0 rgba(0, 0, 0, 0.2);border:5px solid #ffffff;box-shadow:0 0 1px rgba(0, 0, 0, 0.5);margin-right:20px;display:inline-block;}
-.btn-large{font-size:22px;}
-.btn-accept{background-color:#56893D;}
-.btn-danger{background-color:#8B0600;}
-.pull-right{float:right;}
-.error{border:1px solid #DD676C;color:#DD676C;font-size:14px;padding:10px;background-color:#FFF;}
-.container{margin:0 auto;padding:0 20px;position:relative;display:block;}.container:after{display:table;clear:both;content:"";}
-@media screen and (min-width: 960px){.container{max-width:960px;}}@media screen and (max-width: 767px){.container{width:auto;}}
-section{display:block;padding:20px 0;}@media screen and (max-width: 767px){section{background-image:none !important;}}
-header{z-index:10000;position:fixed;top:0;left:0;right:0;background-color:#e6d5cd;height:70px;border:1px solid #FFF;border-width:1px 0;box-shadow:0px 1px 5px rgba(0, 0, 0, 0.4);}@media screen and (max-width: 767px){header{height:50px;}}header li,header ul{float:left;list-style:none;padding:0;margin:0;}
-header li{margin-right:30px;}@media screen and (min-width: 768px) and (max-width: 959px){header li{margin-right:20px;}}@media screen and (max-width: 767px){header li{margin-right:20px;}}
-header .iconic{font-style:normal;font-size:22px;font-weight:normal;}@media screen and (min-width: 960px){header .iconic{float:left;margin-right:3px;}}@media screen and (min-width: 768px) and (max-width: 959px){header .iconic{float:left;margin-right:3px;}}
-header a{display:block;height:70px;line-height:70px;color:#c27b54;font-weight:bold;text-decoration:none;text-shadow:0 1px 0 #FFF;}@media screen and (max-width: 767px){header a{height:50px;line-height:50px;}header a span{display:none;} header a .iconic{font-size:22px;}}
-.bride-groom .rsvp{margin:40px auto;text-align:center;padding:20px 10px;background-color:#FFF;border:1px solid #CCC;width:600px;}.bride-groom .rsvp .change-rsvp{font-size:12px;margin:20px 0 10px;color:#AAA;}.bride-groom .rsvp .change-rsvp a{color:#4a2635;}
-.bride-groom .rsvp h2{color:#808080;margin:0 0 20px;text-align:center;font-family:'Raleway',sans-serif;text-transform:none;font-size:16px;font-weight:200;}
-.bride-groom img{-webkit-transform:rotate(-2deg);-moz-transform:rotate(-2deg);-ms-transform:rotate(-2deg);-o-transform:rotate(-2deg);height:350px;width:350px;border:15px solid #FFF;box-shadow:1px 1px 8px rgba(0, 0, 0, 0.6);display:block;margin:0 auto 50px;}@media screen and (min-width: 960px){.bride-groom img{position:absolute;left:40px;top:20px;}}@media screen and (min-width: 768px) and (max-width: 959px){.bride-groom img{position:absolute;left:40px;top:40px;height:200px;width:200px;}}@media screen and (max-width: 767px){.bride-groom img{position:static;height:auto;width:85%;display:block;margin:0 auto 60px;}}
-.bride-groom h1{margin:0;position:relative;margin-bottom:40px;height:300px;font-size:160px;}@media screen and (min-width: 960px){.bride-groom h1{margin-left:430px;}}@media screen and (min-width: 768px) and (max-width: 959px){.bride-groom h1{margin-left:220px;-webkit-transform:scale(0.8);-moz-transform:scale(0.8);-ms-transform:scale(0.8);-o-transform:scale(0.8);transform:scale(0.8);}}@media screen and (max-width: 767px){.bride-groom h1{margin-left:-80px;margin-top:-40px;margin-bottom:-20px;-webkit-transform:scale(0.6);-moz-transform:scale(0.6);-ms-transform:scale(0.6);-o-transform:scale(0.6);transform:scale(0.6);}}
-.bride-groom .bride,.bride-groom .groom,.bride-groom .ampersand{position:relative;font-weight:normal;position:absolute;}
-.bride-groom .ampersand{color:#FFF;background-color:#c27b54;height:85px;width:85px;border-radius:85px;display:block;text-align:center;font-size:85px;font-family:'Alex Brush',cursive;line-height:100px;top:130px;left:50px;}
-.bride-groom .first-name{position:absolute;font-family:'Alex Brush',cursive;font-size:160px;color:#4a2635;line-height:160px;text-shadow:0 3px 0 #FFF;}
-.bride-groom .last-name{position:absolute;font-family:'Raleway',sans-serif;font-size:34px;color:#808080;text-transform:uppercase;}
-.bride-groom .bride{top:150px;left:100px;}
-.bride-groom .bride .last-name{top:110px;left:230px;}
-.bride-groom .groom .last-name{top:110px;left:250px;}
-.bride-groom p{text-align:center;font-family:'Raleway',sans-serif;text-transform:uppercase;color:#808080;}@media screen and (min-width: 960px){.bride-groom p{margin-left:430px;width:50%;}}
-.bride-groom time{font-size:38px;border-top:1px dashed #999999;padding-top:20px;}@media screen and (max-width: 767px){.bride-groom time{font-size:28px;}}
-.bride-groom .location{display:block;font-size:26px;}@media screen and (max-width: 767px){.bride-groom .location{font-size:19.5px;}}
-.our-story{background-color:#FFF;padding-bottom:60px;}
-.location-schedule{background:#f4f4f4 url(/img/unity-bg.jpg) no-repeat center;color:#000;text-shadow:0 1px 0 #FFF;}.location-schedule ul{padding:0;list-style-position:inside;line-height:2.5em;}
-.location-schedule .snapshots{float:right;width:60%;text-align:left;margin-bottom:100px;}@media screen and (max-width: 767px){.location-schedule .snapshots{display:none;}}
-.location-schedule .frame{display:inline;max-height:225px;-webkit-transform:rotate(-5deg);-moz-transform:rotate(-5deg);-ms-transform:rotate(-5deg);-o-transform:rotate(-5deg);}.location-schedule .frame:first-child{right:-50px;top:50px;position:relative;}
-.location-schedule .frame +.frame{-webkit-transform:rotate(5deg);-moz-transform:rotate(5deg);-ms-transform:rotate(5deg);-o-transform:rotate(5deg);}
-@media screen and (min-width: 768px) and (max-width: 959px){.location-schedule .frame{max-width:200px;max-height:200px;}}
-.location-schedule .agenda{width:35%;margin-bottom:30px;float:left;white-space:nowrap;}@media screen and (max-width: 767px){.location-schedule .agenda{width:auto;float:none;}}
-.location-schedule .agenda ul{list-style:none;margin:0;}
-.location-schedule:after{display:table;content:"";height:0;clear:both;}
-.location-schedule .travel,.location-schedule .shuttle{float:left;width:47.5%;margin-left:5%;}@media screen and (max-width: 767px){.location-schedule .travel,.location-schedule .shuttle{width:auto;float:none;margin:0 0 20px;}}
-.location-schedule .travel{margin-left:0;clear:both;}
-.maps{background-color:#FFF;}.maps h4{border-bottom:none;margin:0;font-weight:normal;}
-.maps .map{background-color:#FFF;padding:10px;box-shadow:1px 1px 8px rgba(0, 0, 0, 0.6);width:45%;float:left;}.maps .map +.map{float:right;}
-.maps .map img{max-width:100%;height:auto;}
-@media screen and (max-width: 767px){.maps .map{float:none !important;margin:0 auto 40px;width:auto;}}
-.gifts{background-color:#FFF;padding-bottom:60px;}.gifts p+h3{margin-top:30px;}
-.gifts .registries img{display:inline;height:50px;margin-right:30px;margin-top:15px;}
-.gifts:after{content:"";display:table;height:0;clear:both;}
-.gifts .registries{width:50%;float:left;}
-.gifts .charity{float:right;width:40%;}
-@media screen and (max-width: 767px){.gifts .charity,.gifts .registries{float:none;width:auto;margin-bottom:20px;}}
-.kansas-city{background:#f4f4f4 url(/img/kc.jpg) no-repeat center;color:#000;text-shadow:0 1px 0 #FFF;padding-bottom:30px;}.kansas-city:after{content:"";display:table;clear:both;height:0;}
-.kansas-city h2{margin-bottom:10px;}
-.kansas-city p{margin-bottom:40px;}
-.kansas-city .category{float:left;width:33%;}@media screen and (max-width: 767px){.kansas-city .category{width:auto;float:none;}}
-.kansas-city ul{list-style:none;padding:0;}
-.kansas-city a{background-color:#FFF;color:#4a2635;padding:10px;margin:2px;text-decoration:none;display:block;}.kansas-city a:hover{background-color:#FFF;text-decoration:underline;}
-.kansas-city .break{clear:left;}
+/*! normalize.css v1.1.1 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+[hidden] {
+  display: none;
+}
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Prevent system color scheme's background color being used in Firefox, IE,
+ *    and Opera.
+ * 2. Prevent system color scheme's text color being used in Firefox, IE, and
+ *    Opera.
+ * 3. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 4. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  background: #fff;
+  /* 1 */
+
+  color: #000;
+  /* 2 */
+
+  font-size: 100%;
+  /* 3 */
+
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* 4 */
+
+}
+/**
+ * Address `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+/**
+ * Address margins handled incorrectly in IE 6/7.
+ */
+body {
+  margin: 0;
+}
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address font sizes and margins set differently in IE 6/7.
+ * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+h6 {
+  font-size: 0.67em;
+  margin: 2.33em 0;
+}
+/**
+ * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+/**
+ * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+blockquote {
+  margin: 1em 40px;
+}
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+/**
+ * Address differences between Firefox and other browsers.
+ * Known issue: no IE 6/7 normalization.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+/**
+ * Address styling not present in IE 6/7/8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+/**
+ * Address margins set differently in IE 6/7.
+ */
+p,
+pre {
+  margin: 1em 0;
+}
+/**
+ * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+/**
+ * Address CSS quotes not supported in IE 6/7.
+ */
+q {
+  quotes: none;
+}
+/**
+ * Address `quotes` property not supported in Safari 4.
+ */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/**
+ * Address margins set differently in IE 6/7.
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+/**
+ * Address paddings set differently in IE 6/7.
+ */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+/**
+ * Correct list images handled incorrectly in IE 7.
+ */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+img {
+  border: 0;
+  /* 1 */
+
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+
+}
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+figure {
+  margin: 0;
+}
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+form {
+  margin: 0;
+}
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+
+  *margin-left: -7px;
+  /* 3 */
+
+}
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+
+  margin: 0;
+  /* 2 */
+
+  vertical-align: baseline;
+  *vertical-align: middle;
+  /* 3 */
+
+}
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+
+  cursor: pointer;
+  /* 3 */
+
+  *overflow: visible;
+  /* 4 */
+
+}
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+
+  padding: 0;
+  /* 2 */
+
+  *height: 13px;
+  *width: 13px;
+  /* 3 */
+
+}
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+
+  box-sizing: content-box;
+}
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+
+  vertical-align: top;
+  /* 2 */
+
+}
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+body {
+  font-size: 1em;
+  line-height: 1.4;
+}
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+img {
+  vertical-align: middle;
+}
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
+}
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+html {
+  padding-top: 70px;
+  background: #ffffff url(/img/linen.jpg);
+  color: #666;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+}
+@media screen and (max-width: 767px) {
+  html {
+    padding-top: 50px;
+  }
+}
+img.frame {
+  border: 10px solid #FFF;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+}
+hr.solid {
+  border-top: 5px solid #FFF;
+  border-bottom: 5px solid #F4F4F4;
+  margin: 0;
+}
+hr.solid-reverse {
+  border-bottom: 5px solid #FFF;
+  border-top: 5px solid #F4F4F4;
+  margin: 0;
+}
+h2 {
+  color: #4A2635;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 767px) {
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+}
+h3 {
+  font-size: 18px;
+  color: #C27B54;
+  margin: 5px 0;
+}
+h4 {
+  font-size: 14px;
+  color: #4A2635;
+  margin: 5px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px dotted #999;
+}
+.control {
+  margin-bottom: 20px;
+}
+.control input {
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  padding: 11px 5px;
+  display: inline-block;
+}
+@media screen and (max-width: 767px) {
+  .control input {
+    max-width: 90%;
+  }
+}
+.control select {
+  font-size: 16px;
+  margin-top: 10px;
+}
+.control label {
+  display: block;
+}
+.control label span {
+  display: block;
+  margin-bottom: 10px;
+}
+.rsvp-search {
+  text-align: center;
+}
+.rsvp-search label {
+  display: block;
+  color: #999999;
+  margin-top: 10px;
+}
+.rsvp-search .btn {
+  background-color: #4A2635;
+}
+.rsvp-search input[type=email] {
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  padding: 11px 5px;
+  display: inline-block;
+  width: 400px;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .rsvp-search input[type=email] {
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .rsvp-search input[type=email] {
+    width: 180px;
+    margin-right: 10px;
+  }
+}
+.rsvp-form .control input {
+  width: 300px;
+}
+.rsvp-form .email input {
+  width: 620px;
+}
+.rsvp-form .email span {
+  font-style: italic;
+  display: block;
+  font-size: 11px;
+}
+@media screen and (max-width: 767px) {
+  .rsvp-form .btn {
+    float: right;
+  }
+}
+.rsvp-form .first-name {
+  margin-right: 10px;
+}
+.rsvp-form .first-name,
+.rsvp-form .last-name {
+  float: left;
+}
+.rsvp-form .form-actions {
+  clear: both;
+}
+.guest-list {
+  background-color: #FFF;
+  border: 1px solid #cccccc;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+.guest-list legend {
+  font-size: 16px;
+}
+.guest-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+}
+.guest-list li {
+  border-top: 1px dashed #cccccc;
+  padding: 10px 0;
+  position: relative;
+}
+.guest-list li:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.guest-list li .btn {
+  clear: both;
+  float: left;
+  margin-top: 1.5em;
+}
+@media screen and (min-width: 960px) {
+  .guest-list li .btn {
+    float: right;
+    clear: none;
+  }
+}
+.guest-list .control {
+  float: left;
+  display: block;
+  margin-right: 10px;
+}
+.guest-list .control label {
+  display: block;
+}
+.guest-list .control input {
+  width: 90%;
+}
+@media screen and (max-width: 767px) {
+  .guest-list .control {
+    float: none;
+  }
+  .guest-list input {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .guest-list .control-age {
+    clear: left;
+  }
+  .guest-list .control-first-name,
+  .guest-list .control-last-name {
+    width: 40%;
+  }
+}
+.guest-list.not-attending .control-dinner,
+.guest-list.not-attending .control-age {
+  display: none;
+}
+.confirmed-guests {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.confirmed-guests > li {
+  background-color: #FFF;
+  border-top: 2px solid #666;
+}
+.confirmed-guests table {
+  width: 100%;
+}
+.confirmed-guests td {
+  border-top: 1px solid #CCC;
+  padding: 5px;
+}
+.iconic {
+  font-style: normal;
+}
+.clearfix:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.btn {
+  background-color: #808080;
+  color: #FFF;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  padding: 7px 20px;
+  text-decoration: none;
+  font-weight: 200;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  border: 5px solid #ffffff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  margin-right: 20px;
+  display: inline-block;
+}
+.btn-large {
+  font-size: 22px;
+}
+.btn-accept {
+  background-color: #56893D;
+}
+.btn-danger {
+  background-color: #660027;
+}
+.pull-right {
+  float: right;
+}
+.error {
+  border: 1px solid #DD676C;
+  color: #DD676C;
+  font-size: 14px;
+  padding: 10px;
+  background-color: #FFF;
+}
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  display: block;
+}
+.container:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+@media screen and (min-width: 960px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container {
+    width: auto;
+    padding: 0 10px;
+  }
+}
+section {
+  display: block;
+  padding: 20px 0;
+}
+@media screen and (max-width: 767px) {
+  section {
+    background-image: none !important;
+  }
+}
+/* HEADER */
+header {
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #e6d5cd;
+  height: 70px;
+  border: 1px solid #FFF;
+  border-width: 1px 0;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
+}
+@media screen and (max-width: 767px) {
+  header {
+    height: 50px;
+  }
+}
+header li,
+header ul {
+  float: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+header li {
+  margin-right: 30px;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  header li {
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  header li {
+    margin-right: 20px;
+  }
+}
+header .title-link a {
+  font-family: 'Alex Brush', cursive;
+  font-size: 2.5em;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  header .title-link a {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 767px) {
+  header .title-link a {
+    font-size: 1.25em;
+  }
+}
+header .iconic {
+  font-style: normal;
+  font-size: 22px;
+  font-weight: normal;
+}
+@media screen and (min-width: 960px) {
+  header .iconic {
+    float: left;
+    margin-right: 3px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  header .iconic {
+    float: left;
+    margin-right: 3px;
+  }
+}
+header a {
+  display: block;
+  height: 70px;
+  line-height: 70px;
+  color: #a86643;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #FFF;
+}
+@media screen and (max-width: 767px) {
+  header a {
+    height: 50px;
+    line-height: 50px;
+  }
+  header a span {
+    display: none;
+  }
+  header a .iconic {
+    font-size: 22px;
+  }
+}
+/*****************************************
+* Brid and Groom
+******************************************/
+.bride-groom .rsvp {
+  margin: 40px auto;
+  text-align: center;
+  padding: 20px 10px;
+  background-color: #FFF;
+  border: 1px solid #CCC;
+  width: 600px;
+}
+@media screen and (max-width: 767px) {
+  .bride-groom .rsvp {
+    width: auto;
+  }
+}
+.bride-groom .rsvp .change-rsvp {
+  clear: both;
+  font-size: 12px;
+  margin: 20px 0 10px;
+  color: #AAA;
+}
+.bride-groom .rsvp .change-rsvp a {
+  color: #4a2635;
+}
+@media screen and (max-width: 767px) {
+  .bride-groom .rsvp .btn {
+    width: 45%;
+    float: left;
+    font-size: .9em;
+    margin: 0 0 20px;
+  }
+  .bride-groom .rsvp .btn + .btn {
+    float: right;
+  }
+}
+.bride-groom .rsvp h2 {
+  color: #808080;
+  margin: 0 0 20px;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  text-transform: none;
+  font-size: 16px;
+  font-weight: 200;
+}
+.bride-groom img {
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  height: 350px;
+  width: 350px;
+  border: 15px solid #FFF;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+  display: block;
+  margin: 0 auto 50px;
+}
+@media screen and (min-width: 960px) {
+  .bride-groom img {
+    position: absolute;
+    left: 40px;
+    top: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .bride-groom img {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    height: 200px;
+    width: 200px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .bride-groom img {
+    position: static;
+    height: auto;
+    width: 85%;
+    display: block;
+    margin: 0 auto 60px;
+  }
+}
+.bride-groom h1 {
+  margin: 0;
+  position: relative;
+  margin-bottom: 40px;
+  height: 300px;
+  font-size: 160px;
+}
+@media screen and (min-width: 960px) {
+  .bride-groom h1 {
+    margin-left: 430px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .bride-groom h1 {
+    margin-left: 220px;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+@media screen and (max-width: 767px) {
+  .bride-groom h1 {
+    margin-left: -80px;
+    margin-top: -40px;
+    margin-bottom: -20px;
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    -ms-transform: scale(0.6);
+    -o-transform: scale(0.6);
+    transform: scale(0.6);
+  }
+}
+.bride-groom .bride,
+.bride-groom .groom,
+.bride-groom .ampersand {
+  position: relative;
+  font-weight: normal;
+  position: absolute;
+}
+.bride-groom .ampersand {
+  color: #FFF;
+  background-color: #a86643;
+  height: 85px;
+  width: 85px;
+  border-radius: 85px;
+  display: block;
+  text-align: center;
+  font-size: 85px;
+  font-family: 'Alex Brush', cursive;
+  line-height: 100px;
+  top: 130px;
+  left: 50px;
+}
+.bride-groom .first-name {
+  position: absolute;
+  font-family: 'Alex Brush', cursive;
+  font-size: 160px;
+  color: #4a2635;
+  line-height: 160px;
+  text-shadow: 0 3px 0 #FFF;
+}
+.bride-groom .last-name {
+  position: absolute;
+  font-family: 'Raleway', sans-serif;
+  font-size: 34px;
+  color: #808080;
+  text-transform: uppercase;
+}
+.bride-groom .bride {
+  top: 150px;
+  left: 100px;
+}
+.bride-groom .bride .last-name {
+  top: 110px;
+  left: 230px;
+}
+.bride-groom .groom .last-name {
+  top: 110px;
+  left: 250px;
+}
+.bride-groom p {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  color: #808080;
+}
+@media screen and (min-width: 960px) {
+  .bride-groom p {
+    margin-left: 430px;
+    width: 50%;
+  }
+}
+.bride-groom time {
+  font-size: 38px;
+  border-top: 1px dashed #999999;
+  padding-top: 20px;
+}
+@media screen and (max-width: 767px) {
+  .bride-groom time {
+    font-size: 28px;
+  }
+}
+.bride-groom .location {
+  display: block;
+  font-size: 26px;
+}
+@media screen and (max-width: 767px) {
+  .bride-groom .location {
+    font-size: 19.5px;
+  }
+}
+/*****************************************
+* Our Story
+******************************************/
+.our-story {
+  background-color: #FFF;
+  padding-bottom: 60px;
+}
+/*****************************************
+* Schedule & Location
+******************************************/
+.location-schedule {
+  background: #f4f4f4 url(/img/unity-bg.jpg) no-repeat center;
+  color: #000;
+}
+.location-schedule ul {
+  padding: 0;
+  list-style-position: inside;
+  line-height: 2.5em;
+}
+.location-schedule .snapshots {
+  float: right;
+  width: 60%;
+  text-align: left;
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 767px) {
+  .location-schedule .snapshots {
+    display: none;
+  }
+}
+.location-schedule .frame {
+  display: inline;
+  max-height: 225px;
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+}
+.location-schedule .frame:first-child {
+  right: -50px;
+  top: 50px;
+  position: relative;
+}
+.location-schedule .frame + .frame {
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .location-schedule .frame {
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
+.location-schedule .agenda {
+  width: 35%;
+  margin-bottom: 30px;
+  float: left;
+  white-space: nowrap;
+}
+@media screen and (max-width: 767px) {
+  .location-schedule .agenda {
+    width: auto;
+    float: none;
+  }
+}
+.location-schedule .agenda ul {
+  list-style: none;
+  margin: 0;
+}
+.location-schedule:after {
+  display: table;
+  content: "";
+  height: 0;
+  clear: both;
+}
+.location-schedule .travel,
+.location-schedule .shuttle {
+  float: left;
+  width: 47.5%;
+  margin-left: 5%;
+}
+@media screen and (max-width: 767px) {
+  .location-schedule .travel,
+  .location-schedule .shuttle {
+    width: auto;
+    float: none;
+    margin: 0 0 20px;
+  }
+}
+.location-schedule .travel {
+  margin-left: 0;
+  clear: both;
+}
+.maps {
+  background-color: #FFF;
+}
+.maps h4 {
+  border-bottom: none;
+  margin: 0;
+  font-weight: normal;
+}
+.maps .map {
+  background-color: #FFF;
+  padding: 10px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+  width: 45%;
+  float: left;
+}
+.maps .map + .map {
+  float: right;
+}
+.maps .map img {
+  max-width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 767px) {
+  .maps .map {
+    float: none !important;
+    margin: 0 auto 40px;
+    width: auto;
+  }
+}
+/*****************************************
+* Gifts
+******************************************/
+.gifts {
+  background-color: #FFF;
+  padding-bottom: 60px;
+}
+.gifts p + h3 {
+  margin-top: 30px;
+}
+.gifts .registries img {
+  display: inline;
+  height: 50px;
+  margin-right: 30px;
+  margin-top: 15px;
+}
+.gifts:after {
+  content: "";
+  display: table;
+  height: 0;
+  clear: both;
+}
+.gifts .registries {
+  width: 50%;
+  float: left;
+}
+.gifts .charity {
+  float: right;
+  width: 40%;
+}
+@media screen and (max-width: 767px) {
+  .gifts .charity,
+  .gifts .registries {
+    float: none;
+    width: auto;
+    margin-bottom: 20px;
+  }
+}
+/*****************************************
+* Kansas City
+******************************************/
+.kansas-city {
+  background: #f4f4f4 url(/img/kc.jpg) no-repeat center;
+  color: #000;
+  text-shadow: 0 1px 0 #FFF;
+  padding-bottom: 30px;
+}
+.kansas-city:after {
+  content: "";
+  display: table;
+  clear: both;
+  height: 0;
+}
+.kansas-city h2 {
+  margin-bottom: 10px;
+}
+.kansas-city p {
+  margin-bottom: 40px;
+}
+.kansas-city .category {
+  float: left;
+  width: 33%;
+}
+@media screen and (max-width: 767px) {
+  .kansas-city .category {
+    width: auto;
+    float: none;
+  }
+}
+.kansas-city ul {
+  list-style: none;
+  padding: 0;
+}
+.kansas-city a {
+  background-color: #FFF;
+  color: #4a2635;
+  padding: 10px;
+  margin: 2px;
+  text-decoration: none;
+  display: block;
+}
+.kansas-city a:hover {
+  background-color: #FFF;
+  text-decoration: underline;
+}
+.kansas-city .break {
+  clear: left;
+}

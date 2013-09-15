@@ -5,47 +5,55 @@ block content
     div.container
       if rsvp
         h2 Manage your guest list
+        if error
+          p.error= error
         p= rsvp.email
         
         form(method="post", action="/rsvp/#{rsvp._id}")
           input(type='hidden', name='rsvp[email]', value=rsvp.email)
           .control
             label Status
-            select(name='rsvp[attending]')
-              option(value='true') Yes, I will be attending
-              option(value='false') No, I am unable to attend
+            select(name='rsvp[attending]', id="attending")
+              option(value='true', selected=(rsvp.attending == true)) Yes, I will be attending
+              option(value='false', selected=(rsvp.attending == false)) No, I am unable to attend
         
-          fieldset.guest-list
-            p Please include the full name, age, and dinner choice of <em>all</em> guests attending.
+          fieldset(class=(rsvp.attending ? 'guest-list attending' : 'guest-list not-attending'))
+            if rsvp.attending
+              p Please include the full name, age, and dinner choice of <em>all</em> guests attending.
             ul
               each guest, i in rsvp.guests
                 li
-                  .control
+                  .control.control-first-name
                     label First Name
                     input(name='guests[#{i}][first_name]', value='#{guest.first_name}')
-                  .control
+                  .control.control-last-name
                     label Last Name
                     input(name='guests[#{i}][last_name]', value='#{guest.last_name}')
-                  .control
+                  .control.control-age
                     label Age
                     select(name='guests[#{i}][adult]', value='#{guest.adult}')
                       option(value="true") Adult
                       option(value="false") Child
-                  .control
+                  .control.control-dinner
                     label Dinner
                     select(name='guests[#{i}][dinner]', value='#{guest.dinner}')
-                      option(value="beef", selected=(guest.dinner == 'beef')) Beef Brisket
-                      option(value="chicken", selected=(guest.dinner == 'chicken')) Chicken
-                      option(value="vegi", selected=(guest.dinner == 'vegi')) Vegitarian
+                      option(value="beef", selected=(guest.dinner == 'beef')) Smoked Beef Brisket
+                      option(value="chicken", selected=(guest.dinner == 'chicken')) Roasted Chicken Breast with Smoked Ham
+                      option(value="vegi", selected=(guest.dinner == 'vegi')) Eggplant Napolean with Pomodoro Sauce
                       option(value="strips", selected=(guest.dinner == 'strips')) Chicken Strips (kids 2-12)
-                  .form-actions
-                    if i > 0
-                      button.btn.btn-danger(type='submit', name='remove_guest', value='#{i}') <span class="iconic x"></span>
-                        
+                  input(type='hidden', name='guests[#{i}][_id]', value='#{guest._id}')
+                  if i > 0
+                    button.btn.btn-danger(type='submit', name='remove_guest', value='#{guest._id}') Remove
+          if rsvp.attending       
             button.btn(type='submit', name='add_guest', value='Add Guest') <span class="iconic plus_alt"></span> Add Guest
-            
           button.btn.btn-accept(type='submit', name='save', value='save') Save
           a(href='/') Cancel
       else
         h2 RSVP not found
+        
+  script
+    $(document.body).on('change', '#attending', function() {
+      $(this).closest('form').submit();
+    });
+  
       

@@ -5,6 +5,10 @@
     border: 1px solid @grayLighter;
     padding: 11px 5px;
     display: inline-block;
+    
+    @media @phone {
+      max-width: 90%;
+    }
   }
   
   select {
@@ -39,21 +43,43 @@
     border: 1px solid @grayLighter;
     padding: 11px 5px;
     display: inline-block;
+    width: 400px;
     
-    @media @desktop {
-      width: 400px;
+    @media @tablet {
+      margin-right: 10px;
+    }
+    
+    @media @phone {
+      width: 180px;
+      margin-right: 10px;
     }
   }
 }
 
 
 .rsvp-form {   
-   .email input {
-     width: 600px + @gridGutterWidth;
-   }
    
    .control input {
       width: 300px;
+   }
+   
+   .email {
+     
+     input {
+       width: 600px + @gridGutterWidth;
+     }
+     
+     span {
+       font-style: italic;
+       display: block;
+       font-size: 11px;
+     }
+   }
+   
+   @media @phone { 
+     .btn {
+       float: right;
+     }
    }
    
    .first-name {
@@ -73,7 +99,7 @@
 .guest-list {
   background-color: #FFF;
   border: 1px solid @grayLighter;
-  padding: 0 @gridGutterWidth @gridGutterWidth;
+  padding: 0 @gridGutterWidth;
   margin-bottom: @gridGutterWidth;
   
   legend {
@@ -91,9 +117,16 @@
     border-top: 1px dashed @grayLighter;
     padding: @gridGutterWidth/2 0;
     .clearfix();
+    position: relative;
     
     .btn {
-      float: right;
+      clear: both;
+      float: left;
+      
+      @media @desktop {
+        float: right;
+        clear: none;
+      }
       margin-top: 1.5em;
     }
   }
@@ -105,6 +138,44 @@
     label {
       display: block;
     }
+    
+    input {
+      width: 90%;
+    }
+  }
+  
+  @media @phone {
+    .control {
+      float: none;
+    }
+    
+    input {
+      width: 90%;
+    }
+  }
+  
+  @media @tablet {
+    .control-age {
+      clear: left;
+    }
+    
+    .control-first-name,
+    .control-last-name {
+      width: 40%;
+    }
+  }
+  
+  
+  
+  &.not-attending {
+  	
+	  .control-dinner,
+	  .control-age {
+		  display: none;
+	  }
+	  
+	  
+	
   }
   
 }

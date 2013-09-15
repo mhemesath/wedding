@@ -1,0 +1,17 @@
+|Mike & Stacey's Wedding - RSVP Confirmation
+| 
+if !rsvp.attending
+  | This is a confirmation you will not be attending our wedding. We are sorry to hear that you will not be present to share our special day with us, but we thank your for being such an important part of our lives.
+else
+  |This is a confirmation you will be attending our wedding. Thank your for being such an important part of our lives and we look forward to you sharing our special day with us.
+  | 
+  |Below are the guests that have been included in your RSVP:
+  |-----------------------------------------------------
+  | 
+  each guest, i in rsvp.guests
+    | #{i + 1}.  #{guest.first_name} #{guest.last_name}, #{guest.adult ? "Adult" : "Child"}, #{guest.dinner}
+    | 
+
+| 
+| 
+| Changes may be made to your reservation before September 13th by visiting http://www.mikestaceykc.com/rsvp.
